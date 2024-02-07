@@ -1,38 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar i {
+  font-size: 2rem;
   color: white;
+  padding: 0px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar .navbar-brand {
+  text-align: center;
+  margin: auto;
+  font-size: 2.5rem;
+  color: white;
+  transition: all .5s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar .navbar-brand:hover {
+  color: white;
+
+}
+
+
+.TodoWrapper {
+  background: #1d1160;
+  margin: 1rem 0rem 4rem;
+  padding: 2rem;
+  border-radius: 5px;
+  text-align: center;
+  width: 60%;
+}
+
+.TodoWrapper h1 {
+  color: rgb(255, 255, 255);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .TodoWrapper {
+    width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.TodoForm {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.todo-input {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.btn-danger {
+  height: auto;
+  margin: 2rem 0rem 0rem;
+}
+
+.todo-input::placeholder {
+  color: rgb(105, 105, 105);
+  font-size: .9rem;
+}
+
+.Todo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #8758ff;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: all .3s ease;
+}
+
+.Todo .p {
+  text-align: start;
+  width: 80%;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+
+  .Todo {
+    flex-wrap: wrap;
   }
+  
+  .Todo .p {
+    width: 100%;
+  }
+}
+
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+.incompleted {
+  color: #fff;
+  cursor: pointer;
+}
+
+.completed {
+  color: #c5aeff;
+  text-decoration: line-through;
+}
+
+.completed-todo {
+  background-color: rgba(135, 88, 255, .4);
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+}
+
+footer {
+  background-color: #374850;
+  padding: 5px 0;
+  bottom: 0;
+}
+
+footer a {
+  color: white;
+  transition: all 0.3s;
+}
+
+footer a:hover {
+  color: rgb(174, 174, 174);
 }
