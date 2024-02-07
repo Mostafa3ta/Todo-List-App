@@ -144,9 +144,16 @@ a:hover {
 }
 
 footer {
-  background-color: #374850;
-  padding: 5px 0;
+  position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #374850;
+}
+
+footer .fab{
+  margin: 0rem .5rem;
+  font-size: 1.75rem;
 }
 
 footer a {
@@ -155,5 +162,11 @@ footer a {
 }
 
 footer a:hover {
-  color: rgb(174, 174, 174);
+  color: #8758ff;
+}
+
+.social-media {
+  color: white;
+  text-align: center;
+  margin: .6rem 0rem .4rem;
 }

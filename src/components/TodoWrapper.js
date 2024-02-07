@@ -51,16 +51,15 @@ export default function TodoWrapper() {
     return <>
         <nav class="navbar">
             <div class="container-fluid">
-                <a class="navbar-brand" href='#home'>
+                <h1 class="navbar-brand" href='#home'>
                     ToDo List
                     <i class="fa-solid fa-circle-check"></i>
-                </a>
+                </h1>
             </div>
         </nav>
 
-        <div id='home' className='container d-flex justify-content-center'>
+        <div className='container d-flex justify-content-center'>
             <div className='TodoWrapper'>
-                {/* <h1>Get Things Done !</h1> */}
                 <TodoForm addTodo={addTodo} />
                 {todos.map((todo, index) => (
                     todo.isEditing ? (
@@ -77,20 +76,20 @@ export default function TodoWrapper() {
             </div>
         </div>
 
-        <footer class="fixed-bottom bg-dark">
+        <footer>
             <div class="container">
-                <div class="social-media text-white text-center mt-2">
-                    <a href="https://www.facebook.com/profile.php?id=100007766405910&ref=xav_ig_profile_web" class="email-col"
-                        target="_blank" rel='noopener noreferrer'><i class="fab fs-3 px-2 fa-facebook-f"></i>
+                <div class="social-media ">
+                    <a href="https://www.facebook.com/profile.php?id=100007766405910&ref=xav_ig_profile_web"
+                        target="_blank" rel='noopener noreferrer'><i class="fab fa-facebook"></i>
                     </a>
-                    <a href="https://www.instagram.com/mostafa3ta_106?igsh=bXVoMm9yazcwdmlo" class="email-col" target="_blank" rel='noopener noreferrer'><i
-                        class="fab fs-3 px-2 fa-instagram"></i>
+                    <a href="https://www.instagram.com/mostafa3ta_106?igsh=bXVoMm9yazcwdmlo" target="_blank" rel='noopener noreferrer'><i
+                        class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://github.com/Mostafa3ta" class="email-col" target="_blank" rel='noopener noreferrer'><i
-                        class="fab fs-3 px-2 fa-github"></i>
+                    <a href="https://github.com/Mostafa3ta" target="_blank" rel='noopener noreferrer'><i
+                        class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/mostafa-mahmoud-33a1542b0" class="email-col" target="_blank" rel='noopener noreferrer'><i
-                        class="fab fs-3 px-2 fa-linkedin-in"></i>
+                    <a href="https://www.linkedin.com/in/mostafa-mahmoud-33a1542b0" target="_blank" rel='noopener noreferrer'><i
+                        class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
             </div>
