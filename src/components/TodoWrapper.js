@@ -3,7 +3,12 @@ import TodoForm from './TodoForm'
 import { v4 as uuidv4 } from 'uuid';
 import Todo from './Todo';
 import EditTodo from './EditTodo';
-uuidv4();
+
+const Links = [
+    { link: "https://github.com/Mostafa3ta", icon: "fab fa-github" },
+    { link: "https://www.facebook.com/profile.php?id=100007766405910&ref=xav_ig_profile_web", icon: "fa-solid fa-link" },
+    { link: "https://www.linkedin.com/in/mostafa-mahmoud-33a1542b0", icon: "fab fa-linkedin-in" }
+]
 
 export default function TodoWrapper() {
 
@@ -79,18 +84,10 @@ export default function TodoWrapper() {
         <footer>
             <div class="container">
                 <div class="social-media ">
-                    <a href="https://www.facebook.com/profile.php?id=100007766405910&ref=xav_ig_profile_web"
-                        target="_blank" rel='noopener noreferrer'><i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/mostafa3ta_106?igsh=bXVoMm9yazcwdmlo" target="_blank" rel='noopener noreferrer'><i
-                        class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://github.com/Mostafa3ta" target="_blank" rel='noopener noreferrer'><i
-                        class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/mostafa-mahmoud-33a1542b0" target="_blank" rel='noopener noreferrer'><i
-                        class="fab fa-linkedin-in"></i>
-                    </a>
+                    {Links.map((link, index) =>
+                        <a key={index} href={link.link} target='_blank' rel='noopener noreferrer'>
+                            <i className={link.icon}></i></a>
+                    )}
                 </div>
             </div>
         </footer>
