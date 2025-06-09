@@ -81,12 +81,13 @@ export default function TodoWrapper() {
             </div>
         </div>
 
-        <footer>
+        <footer className='w-100 bg-black'>
             <div class="container">
-                <div class="social-media ">
+                <div class="social-media">
                     {Links.map((link, index) =>
                         <a key={index} href={link.link} target='_blank' rel='noopener noreferrer'>
-                            <i className={link.icon}></i></a>
+                            <i className={`${link.icon} fs-4`}></i>
+                        </a>
                     )}
                 </div>
             </div>
